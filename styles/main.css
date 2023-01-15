@@ -1,0 +1,143 @@
+/* grandstander-regular - latin */
+@font-face {
+    font-family: 'Grandstander';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/grandstander-v11-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/grandstander-v11-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* grandstander-700 - latin */
+@font-face {
+    font-family: 'Grandstander';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/grandstander-v11-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/grandstander-v11-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* grandstander-900 - latin */
+@font-face {
+    font-family: 'Grandstander';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''),
+        url('../fonts/grandstander-v11-latin-900.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/grandstander-v11-latin-900.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+    font-family: 'Grandstander';
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 30rem;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header,
+.main-footer {
+    background-color: #19C290;
+}
+
+h1 {
+    text-align: center;
+    padding-block: 1.5rem;
+}
+
+.parameters {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.parameters+.parameters {
+    margin-block-start: 2rem;
+}
+
+button,
+input {
+    border-radius: 1rem;
+}
+
+button {
+    background-color: #FEC23A;
+}
+
+#width-field,
+#height-field,
+#color-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    justify-self: center;
+    position: relative;
+}
+
+fieldset label {
+    margin-right: 4rem;
+}
+
+#create,
+#erase,
+#draw {
+    justify-self: center;
+    max-width: 15rem;
+    height: 3rem;
+}
+
+#color {
+    height: 3rem;
+}
+
+#width::before,
+#height::before {
+    position: absolute;
+    content: attr(data-value);
+    left: 75%;
+    top: 0;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    margin-block: 2rem;
+    margin-inline: auto;
+}
+
+.pixel {
+    width: 2rem;
+    height: 2rem;
+    background-color: #fff;
+    border: 1px solid lightgrey;
+}
+
+.main-footer {
+    display: flex;
+    text-align: center;
+    padding-block: 1rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 60rem;
+    }
+}

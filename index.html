@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/helper.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Pixel Art</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="parameters">
+                <fieldset id="width-field">
+                    <label for="width">Grid Width</label>
+                    <input type="range" name="width" id="width" min="5" max="50" value="50" data-value="50">
+                </fieldset>
+
+                <fieldset id="height-field">
+                    <label for="height">Grid Height</label>
+                    <input type="range" name="height" id="height" min="5" max="50" value="50"data-value="50">
+                </fieldset>
+            </div>
+            <div class="parameters">
+                <button id="create">Create Grid</button>
+            </div>
+
+            <section id="grid">
+            </section>
+
+            <div class="parameters">
+                <button id="erase">Erase</button>
+                <fieldset id="color-field">
+                    <input type="color" name="color" id="color">
+                </fieldset>
+                <button id="draw">Draw</button>
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            2023 &copy; MaximeBranger
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
